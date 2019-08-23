@@ -131,10 +131,5 @@ public class HorizontalCalendarView extends RecyclerView {
         horizontalCalendar.getConfig().setupDefaultValues(config);
         horizontalCalendar.getDefaultStyle().setupDefaultValues(defaultStyle);
         horizontalCalendar.getSelectedItemStyle().setupDefaultValues(selectedItemStyle);
-
-        // clean, not needed anymore
-        config = null;
-        defaultStyle = null;
-        selectedItemStyle = null;
     }
 }
