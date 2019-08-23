@@ -171,6 +171,12 @@ public abstract class HorizontalCalendarBaseAdapter<VH extends DateViewHolder, T
 
             horizontalCalendar.getCalendarView().setSmoothScrollSpeed(HorizontalLayoutManager.SPEED_SLOW);
             horizontalCalendar.centerCalendarToPosition(position);
+
+            HorizontalCalendarListener calendarListener = horizontalCalendar.getCalendarListener();
+            if(calendarListener != null){
+                Calendar date = getItem(position);
+                calendarListener.onDateSelected(date, position);
+            }
         }
     }
 

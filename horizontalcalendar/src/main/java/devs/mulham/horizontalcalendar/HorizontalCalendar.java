@@ -17,7 +17,6 @@ import devs.mulham.horizontalcalendar.model.HorizontalCalendarConfig;
 import devs.mulham.horizontalcalendar.utils.CalendarEventsPredicate;
 import devs.mulham.horizontalcalendar.utils.HorizontalCalendarListener;
 import devs.mulham.horizontalcalendar.utils.HorizontalCalendarPredicate;
-import devs.mulham.horizontalcalendar.utils.HorizontalSnapHelper;
 import devs.mulham.horizontalcalendar.utils.Utils;
 
 
@@ -76,9 +75,6 @@ public final class HorizontalCalendar {
         calendarView.setHorizontalScrollBarEnabled(false);
         calendarView.applyConfigFromLayout(this);
 
-        HorizontalSnapHelper snapHelper = new HorizontalSnapHelper();
-        snapHelper.attachToHorizontalCalendar(this);
-
         if (disablePredicate == null) {
             disablePredicate = defaultDisablePredicate;
         } else {
@@ -93,7 +89,7 @@ public final class HorizontalCalendar {
 
         calendarView.setAdapter(mCalendarAdapter);
         calendarView.setLayoutManager(new HorizontalLayoutManager(calendarView.getContext(), false));
-        calendarView.addOnScrollListener(new HorizontalCalendarScrollListener());
+//        calendarView.addOnScrollListener(new HorizontalCalendarScrollListener());
 
         post(new Runnable() {
             @Override
