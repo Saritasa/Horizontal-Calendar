@@ -23,7 +23,6 @@ public class HorizontalCalendarView extends RecyclerView {
     private CalendarItemStyle defaultStyle;
     private CalendarItemStyle selectedItemStyle;
     private HorizontalCalendarConfig config;
-    private int shiftCells;
 
     private final float FLING_SCALE_DOWN_FACTOR = 0.5f;
 
@@ -137,24 +136,5 @@ public class HorizontalCalendarView extends RecyclerView {
         config = null;
         defaultStyle = null;
         selectedItemStyle = null;
-
-        this.shiftCells = horizontalCalendar.getNumberOfDatesOnScreen() / 2;
-    }
-
-    /**
-     * @return position of selected date on center of screen
-     */
-    public int getPositionOfCenterItem() {
-        final HorizontalLayoutManager layoutManager = getLayoutManager();
-        if (layoutManager == null) {
-            return -1;
-        } else {
-            final int firstVisiblePosition = layoutManager.findFirstCompletelyVisibleItemPosition();
-            if (firstVisiblePosition == -1) {
-                return -1;
-            } else {
-                return firstVisiblePosition + shiftCells;
-            }
-        }
     }
 }

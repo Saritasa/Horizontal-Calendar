@@ -35,19 +35,6 @@ public final class Utils {
         return ViewGroup.LayoutParams.WRAP_CONTENT;
     }
 
-
-    public static int calculateRelativeCenterPosition(final int position, final int centerItem, final int shiftCells) {
-        int relativeCenterPosition = position;
-
-        if (position > centerItem) {
-            relativeCenterPosition = position + shiftCells;
-        } else if (position < centerItem) {
-            relativeCenterPosition = position - shiftCells;
-        }
-
-        return relativeCenterPosition;
-    }
-
     /**
      * @return <code>true</code> if dates are equal; <code>false</code> otherwise
      */

@@ -13,7 +13,6 @@ import java.util.List;
 
 import devs.mulham.horizontalcalendar.HorizontalCalendar;
 import devs.mulham.horizontalcalendar.HorizontalCalendarView;
-import devs.mulham.horizontalcalendar.HorizontalLayoutManager;
 import devs.mulham.horizontalcalendar.model.CalendarEvent;
 import devs.mulham.horizontalcalendar.model.CalendarItemStyle;
 import devs.mulham.horizontalcalendar.utils.CalendarEventsPredicate;
@@ -169,14 +168,7 @@ public abstract class HorizontalCalendarBaseAdapter<VH extends DateViewHolder, T
             if (position == -1)
                 return;
 
-            horizontalCalendar.getCalendarView().setSmoothScrollSpeed(HorizontalLayoutManager.SPEED_SLOW);
-            horizontalCalendar.centerCalendarToPosition(position);
-
-            HorizontalCalendarListener calendarListener = horizontalCalendar.getCalendarListener();
-            if(calendarListener != null){
-                Calendar date = getItem(position);
-                calendarListener.onDateSelected(date, position);
-            }
+            horizontalCalendar.selectDate(getItem(position), false);
         }
     }
 
