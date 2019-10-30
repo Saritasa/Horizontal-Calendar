@@ -4,10 +4,10 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 
+import androidx.recyclerview.widget.RecyclerView;
 import devs.mulham.horizontalcalendar.adapter.HorizontalCalendarBaseAdapter;
 import devs.mulham.horizontalcalendar.model.CalendarItemStyle;
 import devs.mulham.horizontalcalendar.model.HorizontalCalendarConfig;
@@ -18,7 +18,7 @@ import devs.mulham.horizontalcalendar.model.HorizontalCalendarConfig;
  * @author Mulham-Raee
  * @since v1.0.0
  */
-public class HorizontalCalendarView extends RecyclerView {
+public class HorizontalCalendarView extends RecyclerView{
 
     private CalendarItemStyle defaultStyle;
     private CalendarItemStyle selectedItemStyle;
