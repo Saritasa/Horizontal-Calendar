@@ -13,6 +13,6 @@ node{
     }
 
     stage('build and publish'){
-        sh("./gradlew uploadArchives --stacktrace")
+        sh("./gradlew :horizontalcalendar:uploadArchives --stacktrace")
     }
 }
