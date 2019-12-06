@@ -64,6 +64,8 @@ public class MainActivity extends AppCompatActivity{
                     @Override
                     public List<CalendarEvent> events(Calendar date) {
                         List<CalendarEvent> events = new ArrayList<>();
+
+                        // We don't support more than 4 events, because we implemented fixed height of events recycler view
                         int count = rnd.nextInt(6);
 
                         for (int i = 0; i <= count; i++){
