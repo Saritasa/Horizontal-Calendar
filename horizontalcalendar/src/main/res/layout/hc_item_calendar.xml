@@ -13,7 +13,6 @@
         android:layout_marginBottom="5dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/hc_selector"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,9 +47,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/hc_events_recyclerView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="10dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
+            android:layout_marginBottom="5dp"
             android:gravity="center_horizontal" />
 
     </LinearLayout>
@@ -59,10 +59,8 @@
         android:id="@+id/hc_selector"
         android:layout_width="0dp"
         android:layout_height="5dp"
-        android:layout_marginTop="5dp"
         android:background="#f00f0f"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hc_layoutContent" />

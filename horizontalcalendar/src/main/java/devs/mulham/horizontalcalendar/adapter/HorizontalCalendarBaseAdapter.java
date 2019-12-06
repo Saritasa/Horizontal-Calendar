@@ -65,7 +65,7 @@ public abstract class HorizontalCalendarBaseAdapter<VH extends DateViewHolder, T
         if (eventsPredicate != null) {
             initEventsRecyclerView(viewHolder.eventsRecyclerView);
         } else {
-            viewHolder.eventsRecyclerView.setVisibility(View.GONE);
+            viewHolder.eventsRecyclerView.setVisibility(View.INVISIBLE);
         }
 
         return viewHolder;
@@ -102,7 +102,7 @@ public abstract class HorizontalCalendarBaseAdapter<VH extends DateViewHolder, T
 
         List<CalendarEvent> events = eventsPredicate.events(date);
         if ((events == null) || events.isEmpty()) {
-            viewHolder.eventsRecyclerView.setVisibility(View.GONE);
+            viewHolder.eventsRecyclerView.setVisibility(View.INVISIBLE);
         } else {
             viewHolder.eventsRecyclerView.setVisibility(View.VISIBLE);
             EventsAdapter eventsAdapter = (EventsAdapter) viewHolder.eventsRecyclerView.getAdapter();
