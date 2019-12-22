@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity{
                     public List<CalendarEvent> events(Calendar date) {
                         List<CalendarEvent> events = new ArrayList<>();
 
-                        // We don't support more than 4 events, because we implemented fixed height of events recycler view
+                        // We have a flexible width of day items, that depends on events amount
                         int count = rnd.nextInt(6);
 
                         for (int i = 0; i <= count; i++){
