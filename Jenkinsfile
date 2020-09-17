@@ -1,6 +1,4 @@
-#!/usr/bin/env groovy
-
-node{
+node('android'){
     env.JAVA_HOME = ("${tool name: 'jdk-latest', type: 'jdk'}")
     env.PATH = ("${env.JAVA_HOME}/bin:${env.PATH}")
 
